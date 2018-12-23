@@ -1,0 +1,26 @@
+<div class="navbar">
+		<ul class="nav">
+			<li class="nav-item"><a href="{{ @BASE.'/' }}"
+			<check if="{{ @page_head == 'User List' }}">
+				<true>
+					class="nav-link active"
+				</true>
+				<false>
+					class="nav-link"
+				</false>
+			</check>><i class="fa fa-th" aria-hidden="true"></i></i> Read</a></li>
+			<li class="nav-item"><a href="{{ @BASE.'/user/create' }}"
+			<check if="{{ @page_head == 'Create User' }}">
+				<true>
+					class="nav-link active"
+				</true>
+				<false>
+					class="nav-link"
+				</false>
+			</check>><i class="fa fa-plus" aria-hidden="true"></i> Create</a></li>
+
+			<check if="{{ @page_head == 'Update User' }}">
+				<li class="nav-item"><a class="nav-link active" href="javascript:void(0);"><i class="fa fa-plus" aria-hidden="true"></i> Update</a></li>
+			</check>
+		</ul>
+	</div>

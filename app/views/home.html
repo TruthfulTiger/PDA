@@ -1,0 +1,55 @@
+<section>
+<p>A small virtual shopping arcade, run by a web graduate who likes to do a variety of things to earn a living. Such as...</p>
+<div class="row text-center">
+    <div class="col">
+        <h1 class="display-4"><span class="fa fa-cut" aria-hidden="true"></span></h1>
+        <h4>Making things</h4>
+        <p>I sell items that are made by hand to suit any occasion. Mainly dragonscale gloves in a variety of colours and lengths, including Pride flag colours, with a growing collection of other things to offer.</p>
+    </div>
+    <div class="col">
+        <h1 class="display-4"><span class="fa fa-code" aria-hidden="true"></span></h1>
+        <h4>Coding things</h4>
+        <p>Building web apps that people can enjoy, or otherwise make use of. There are currently two side-projects being worked on; one for students and one for people who play any of the Sims series.</p>
+    </div>
+    <div class="col">
+        <h1 class="display-4"><span class="fa fa-server" aria-hidden="true"></span></h1>
+        <h4>Hosting things</h4>
+        <p>Currently at aspiration stage; one service I aim to offer is a one-stop web host and development package for smaller projects, including start-ups and non-profit organisations, with the smaller budget in mind.</p>
+    </div>
+    <div class="col">
+        <h1 class="display-4"><span class="fa fa-question" aria-hidden="true"></span></h1>
+        <h4>Other things?</h4>
+        <p>I can build and set up computers, I can make costume, I have an interest in game design and have even considered a YouTube channel. Whether or not I can take any of these further remains to be seen, but it doesn’t stop the ideas…</p>
+    </div>
+</div>
+</section>
+<section id="shop">
+    <h2>Shop</h2>
+    <p>This currently links to my Etsy store. An integrated shopping solution is in the works.</p>
+<div class="text-center">
+<script type='text/javascript' src='https://www.etsy.com/assets/js/etsy_mini_shop.js'></script><script type='text/javascript'>new Etsy.Mini(16642518,'gallery',2,2,0,'https://www.etsy.com');</script>
+</div>
+</section>
+<section id="updates">
+    <h2>Updates</h2>
+    <repeat group="{{@rss}}" value="{{@post}}">
+    <h4 class="border-top p-2">{{@post.title}}</h4>
+    <small class="pl-2">Published {{ '{0,date,long}',strtotime(@post.pubDate) | format }}</small>
+<div class="row p-3 mb-4">
+        <div class="col col-lg-2">
+            <a href="{{@post.full}}" data-toggle="lightbox" data-title="{{@post.title}}"><img src="{{@post.image}}" class="float-left" aria-hidden="true"></a>
+        </div>
+        <div class="col col-lg-10">
+            <p>{{@post.description | raw}}</p>
+            <p><a class="btn btn-primary" href="{{@post.link}}" target="_blank">Read more on blog</a></p>
+        </div>
+    </div>
+</repeat>
+</section>
+
+<script>
+$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox({alwaysShowClose: true});
+            });
+</script>

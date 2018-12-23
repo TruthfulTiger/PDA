@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="3d01379f-3c42-423b-be0f-0507872dcdf4" name="phoenixdragon.co.uk" url="http://213.171.193.5">
+        <fileTransfer host="213.171.193.5" port="21" rootFolder="/htdocs/">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
