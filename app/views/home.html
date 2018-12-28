@@ -24,27 +24,28 @@
 </div>
 </section>
 <section id="shop">
-    <h2>Shop</h2>
-    <p>This currently links to my Etsy store. An integrated shopping solution is in the works.</p>
+    <h2>Latest products</h2>
 <div class="text-center">
-<script type='text/javascript' src='https://www.etsy.com/assets/js/etsy_mini_shop.js'></script><script type='text/javascript'>new Etsy.Mini(16642518,'gallery',2,2,0,'https://www.etsy.com');</script>
+<script type='text/javascript' src='https://www.etsy.com/assets/js/etsy_mini_shop.js'></script><script type='text/javascript'>new Etsy.Mini(16642518,'gallery',4,1,0,'https://www.etsy.com');</script>
 </div>
 </section>
 <section id="updates">
-    <h2>Updates</h2>
-    <repeat group="{{@rss}}" value="{{@post}}">
-    <h4 class="border-top p-2">{{@post.title}}</h4>
-    <small class="pl-2">Published {{ '{0,date,long}',strtotime(@post.pubDate) | format }}</small>
-<div class="row p-3 mb-4">
-        <div class="col col-lg-2">
-            <a href="{{@post.full}}" data-toggle="lightbox" data-title="{{@post.title}}"><img src="{{@post.image}}" class="float-left" aria-hidden="true"></a>
+    <h2>Latest updates</h2>
+        <div class="card-deck">
+            <repeat group="{{@rss}}" value="{{@post}}">
+            <div class="card">
+                <a href="{{@post.full}}" data-toggle="lightbox" data-title="{{@post.title}}"><img src="{{@post.image}}" class="mx-auto d-block card-img-top"></a>
+                <div class="card-body">
+                    <h5 class="card-title">{{@post.title}}</h5>
+                    <p class="card-text">{{@post.description | raw}}</p>
+                    <p><a class="btn btn-primary" href="{{@post.link}}" target="_blank">Read more on blog</a></p>
+                </div>
+                <div class="card-footer">
+                    <small>Published {{ '{0,date,long}',strtotime(@post.pubDate) | format }}</small>
+                </div>
+            </div>
+            </repeat>
         </div>
-        <div class="col col-lg-10">
-            <p>{{@post.description | raw}}</p>
-            <p><a class="btn btn-primary" href="{{@post.link}}" target="_blank">Read more on blog</a></p>
-        </div>
-    </div>
-</repeat>
 </section>
 
 <script>
