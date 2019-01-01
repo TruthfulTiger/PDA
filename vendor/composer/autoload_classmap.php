@@ -7,9 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Assets' => $vendorDir . '/ikkez/f3-assets/lib/assets.php',
-    'Mailer' => $vendorDir . '/ikkez/f3-mailer/mailer.php',
-    'PayPal' => $vendorDir . '/kreative/f3-pypl/lib/PayPal.php',
-    'PayPalRP' => $vendorDir . '/kreative/f3-pypl/lib/PayPalRP.php',
-    'PayPalRT' => $vendorDir . '/kreative/f3-pypl/lib/PayPalRT.php',
     'Validate' => $vendorDir . '/geofmureithi/f3-validate/lib/validate.php',
 );

@@ -11,9 +11,7 @@
   ],
   "require": {
     "bcosca/fatfree": "3.6.4",
-    "kreative/f3-pypl": "V1.0.1",
     "ikkez/f3-assets": "dev-master",
-    "geofmureithi/f3-validate": "dev-master",
-    "ikkez/f3-mailer": "^1.0"
+    "geofmureithi/f3-validate": "dev-master"
   }
 }

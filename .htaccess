@@ -1,3 +1,4 @@
+Options -Indexes
 # Enable rewrite engine and route requests to framework
 RewriteEngine On
 
@@ -14,3 +15,35 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule .* index.php [L,QSA]
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]
+
+Header add Link "</ui/css/custom.css>; rel=preload; as=style"
+Header add Link "</pda/ui/css/custom.css>; rel=preload; as=style"
+Header add Link "</ui/js/bootstrap-confirmation.min.js>; rel=preload; as=script"
+Header add Link "</img/PhoenixDragon-TextHeader.png>; rel=preload; as=image"
+Header add Link "</node_modules/bootstrap-confirmation2/dist/bootstrap-confirmation.min.js>; rel=preload; as=script"
+Header add Link "</pda/img/PhoenixDragon-TextHeader.png>; rel=preload; as=image"
+Header add Link "</ui/css/PhoenixDragonL.png>; rel=preload; as=image"
+Header add Link "</ui/js/jquery-simple-validator.min.js>; rel=preload; as=script"
+Header add Link "</ui/js/jquery.easing.min.js>; rel=preload; as=script"
+Header add Link "</ui/js/scrolling-nav.js>; rel=preload; as=script"
+Header add Link "</img/PDLogoCropped.PNG>; rel=preload; as=image"
+Header add Link "</img/Outside.jpg>; rel=preload; as=image"
+Header add Link "</pda/ui/css/PhoenixDragonL.png>; rel=preload; as=image"
+Header add Link "</pda/ui/js/jquery-simple-validator.min.js>; rel=preload; as=script"
+Header add Link "</pda/ui/js/jquery.easing.min.js>; rel=preload; as=script"
+Header add Link "</pda/ui/js/scrolling-nav.js>; rel=preload; as=script"
+Header add Link "</pda/img/PDLogoCropped.PNG>; rel=preload; as=image"
+Header add Link "</pda/img/Outside.jpg>; rel=preload; as=image"
+Header add Link "</ui/css/bootstrap.min.css>; rel=preload; as=style"
+Header add Link "</pda/ui/css/bootstrap.min.css>; rel=preload; as=style"
+Header add Link "</ui/fonts/cabin-v12-vietnamese_latin_latin-ext-regular.eot>; rel=preload; as=font"
+Header add Link "</ui/fonts/cabin-v12-vietnamese_latin_latin-ext-regular.svg>; rel=preload; as=font"
+Header add Link "</ui/fonts/cabin-v12-vietnamese_latin_latin-ext-regular.ttf>; rel=preload; as=font"
+Header add Link "</ui/fonts/cabin-v12-vietnamese_latin_latin-ext-regular.woff>; rel=preload; as=font"
+Header add Link "</ui/fonts/cabin-v12-vietnamese_latin_latin-ext-regular.woff2>; rel=preload; as=font"
+Header add Link "</ui/fonts/fondamento-v8-latin_latin-ext-regular.eot>; rel=preload; as=font"
+Header add Link "</ui/fonts/fondamento-v8-latin_latin-ext-regular.svg>; rel=preload; as=font"
+Header add Link "</ui/fonts/fondamento-v8-latin_latin-ext-regular.ttf>; rel=preload; as=font"
+Header add Link "</ui/fonts/fondamento-v8-latin_latin-ext-regular.woff>; rel=preload; as=font"
+Header add Link "</ui/fonts/fondamento-v8-latin_latin-ext-regular.woff2>; rel=preload; as=font"
+

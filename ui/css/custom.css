@@ -1,9 +1,29 @@
-@import url('https://fonts.googleapis.com/css?family=Cabin|Fondamento');
-
+/* cabin-regular - vietnamese_latin_latin-ext */
 @font-face {
-	font-family: "Anke Calligraph", cursive;
-	src: url(/ui/fonts/ankecallig-fg.eot);
-    src: url('(/ui/fonts/ankecallig-fg.woff') format('woff'), url('(/ui/fonts/ankecallig-fg.ttf') format('truetype'), url('(/ui/fonts/ankecallig-fg.svg') format('svg');
+  font-family: 'Cabin';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/cabin-v12-vietnamese_latin_latin-ext-regular.eot'); /* IE9 Compat Modes */
+  src: local('Cabin'), local('Cabin-Regular'),
+       url('../fonts/cabin-v12-vietnamese_latin_latin-ext-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/cabin-v12-vietnamese_latin_latin-ext-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/cabin-v12-vietnamese_latin_latin-ext-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/cabin-v12-vietnamese_latin_latin-ext-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/cabin-v12-vietnamese_latin_latin-ext-regular.svg#Cabin') format('svg'); /* Legacy iOS */
+}
+
+/* fondamento-regular - latin_latin-ext */
+@font-face {
+  font-family: 'Fondamento';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/fondamento-v8-latin_latin-ext-regular.eot'); /* IE9 Compat Modes */
+  src: local('Fondamento Regular'), local('Fondamento-Regular'),
+       url('../fonts/fondamento-v8-latin_latin-ext-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/fondamento-v8-latin_latin-ext-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/fondamento-v8-latin_latin-ext-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/fondamento-v8-latin_latin-ext-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/fondamento-v8-latin_latin-ext-regular.svg#Fondamento') format('svg'); /* Legacy iOS */
 }
 
 html{
@@ -12,22 +32,37 @@ html{
 }
 
 body {
-    background: #fff url("PhoenixDragonL.png") no-repeat top center fixed;
+    background: #fff url("PhoenixDragonXL.png") no-repeat top center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 	display: -ms-flexbox;
 	display: flex;
-	font-family: 'Cabin', sans-serif;
+	font-family: 'Cabin', 'Tahoma', 'Verdana', 'Segoe', sans-serif;
+    font-display: fallback;
 	font-size: large;
 	padding-top: 5.5rem;
 	margin-bottom: 30px; /* Margin bottom by footer height */
 }
 
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) { body {background: #fff url("PhoenixDragonXS.png") no-repeat top center fixed;} }
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (max-width: 767.98px) { body {background: #fff url("PhoenixDragonS.png") no-repeat top center fixed;} }
+
+/*Medium devices (tablets, 768px and up)*/
+@media (max-width: 991.98px) { body {background: #fff url("PhoenixDragonM.png") no-repeat top center fixed;} }
+
+/*Large devices (desktops, 992px and up)*/
+@media (max-width: 1199.98px) { body {background: #fff url("PhoenixDragonL.png") no-repeat top center fixed;} }
+
+
 /* Main overrides */
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Fondamento', cursive;
+	font-family: 'Fondamento', 'Papyrus', fantasy;
+    font-display: fallback;
 }
 
 .active{

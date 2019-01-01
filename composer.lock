@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9110beedf33ae59258dc154791650f54",
+    "content-hash": "be093e2f4988dd770c8cf9fb45f98dbf",
     "packages": [
         {
             "name": "bcosca/fatfree",
@@ -110,81 +110,6 @@
                 "minify"
             ],
             "time": "2018-09-13T11:27:43+00:00"
-        },
-        {
-            "name": "ikkez/f3-mailer",
-            "version": "v1.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ikkez/f3-mailer.git",
-                "reference": "1c20e0551ef7523a4e775933fbdbd45764c8d596"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ikkez/f3-mailer/zipball/1c20e0551ef7523a4e775933fbdbd45764c8d596",
-                "reference": "1c20e0551ef7523a4e775933fbdbd45764c8d596",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "./"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-3.0"
-            ],
-            "description": "SMTP plugin wrapper for PHP Fat-Free Framework",
-            "homepage": "https://github.com/ikkez/f3-mailer",
-            "keywords": [
-                "F3",
-                "email",
-                "fatfree",
-                "mail",
-                "smtp"
-            ],
-            "time": "2018-09-21T11:39:04+00:00"
-        },
-        {
-            "name": "kreative/f3-pypl",
-            "version": "V1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kreative/F3-PYPL.git",
-                "reference": "405a8a05cc1f4274cd2dba1c7436d97b3f4ddf0c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kreative/F3-PYPL/zipball/405a8a05cc1f4274cd2dba1c7436d97b3f4ddf0c",
-                "reference": "405a8a05cc1f4274cd2dba1c7436d97b3f4ddf0c",
-                "shasum": ""
-            },
-            "require": {
-                "bcosca/fatfree": "^3.5"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.8"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "lib/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-3.0"
-            ],
-            "description": "PayPal Express Checkout integration for the PHP Fat-Free Framework",
-            "homepage": "https://github.com/kreative/f3-pypl",
-            "keywords": [
-                "F3",
-                "express checkout",
-                "fatfree",
-                "paypal"
-            ],
-            "time": "2016-10-27T17:28:14+00:00"
         }
     ],
     "packages-dev": [],
