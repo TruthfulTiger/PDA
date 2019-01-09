@@ -1,1 +1,86 @@
 <p>Test page</p>
+
+<div class="card-deck">
+	<repeat group="{{ @folio2 }}" value="{{ @item }}">
+	<div class="card">
+		<div class="card-header text-center">
+			<h4>{{ @item.title }}</h4>
+		</div>
+		<a href="{{@item.imageLink}}" data-toggle="lightbox" data-title="{{ @item.title }}" data-footer="{{ @item.excerpt }}">
+		<img src="{{@item.image}}" class="card-img-top" alt="{{ @item.title }}">
+		</a>
+		<div class="card-body text-center">
+			<p>Category: {{@item.projectType}}</p>
+			<a class="btn btn-primary text-white" data-toggle="modal" data-target="#modal{{ @item.id }}"><i class="fa fa-eye" aria-hidden="true"></i> About project</a> <a class="btn btn-info text-black" href="{{ @item.link }}" target="_blank"><i class="fa fa-external-link-alt" aria-hidden="true"></i> View project</a>
+		</div>
+		<div class="card-footer">
+			<small>Completed {{ '{0,date,long}',strtotime(@item.finishDate) | format }}</small>
+		</div>
+	</div>
+		<!-- Modal -->
+		<div class="modal fade" id="modal{{ @item.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalCenterTitle">{{ @item.title }}</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						{{ @item.description | raw}}
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</repeat>
+</div>
+
+<div class="card-deck">
+	<repeat group="{{ @folio1 }}" value="{{ @item }}">
+		<div class="card">
+			<div class="card-header text-center">
+				<h4>{{ @item.title }}</h4>
+			</div>
+			<a href="{{@item.imageLink}}" data-toggle="lightbox" data-title="{{ @item.title }}" data-gallery="example-gallery" data-footer="{{ @item.excerpt }}">
+				<img src="{{@item.image}}" class="card-img-top" alt="{{ @item.title }}">
+			</a>
+			<div class="card-body text-center">
+				<p>Category: {{@item.projectType}}</p>
+				<a class="btn btn-primary text-white" data-toggle="modal" data-target="#modal2{{ @item.id }}"><i class="fa fa-eye" aria-hidden="true"></i> About project</a> <a class="btn btn-info text-black" href="{{ @item.link }}" target="_blank"><i class="fa fa-external-link-alt" aria-hidden="true"></i> View project</a>
+			</div>
+			<div class="card-footer">
+				<small>Completed {{ '{0,date,long}',strtotime(@item.finishDate) | format }}</small>
+			</div>
+		</div>
+		<!-- Modal -->
+		<div class="modal fade" id="modal2{{ @item.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle2" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalCenterTitle2">{{ @item.title }}</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						{{ @item.description | raw }}
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</repeat>
+</div>
+
+<script>
+	$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+		event.preventDefault();
+		$(this).ekkoLightbox({alwaysShowClose: true});
+	});
+</script>

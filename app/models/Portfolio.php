@@ -1,11 +1,11 @@
 <?php
 
-class User extends DB\SQL\Mapper {
+class Portfolio extends DB\SQL\Mapper {
 
 	protected $table;
 
 	public function __construct(DB\SQL $db) {
-		$this->table = 'users';
+		$this->table = 'portfolio';
 		parent::__construct($db,$this->table);
 	}
 

@@ -12,6 +12,9 @@ class ComposerStaticInit0dcd4d6c81ef26958a440d017fca3c0e
 
     public static $classMap = array (
         'Assets' => __DIR__ . '/..' . '/ikkez/f3-assets/lib/assets.php',
+        'PayPal' => __DIR__ . '/..' . '/kreative/f3-pypl/lib/PayPal.php',
+        'PayPalRP' => __DIR__ . '/..' . '/kreative/f3-pypl/lib/PayPalRP.php',
+        'PayPalRT' => __DIR__ . '/..' . '/kreative/f3-pypl/lib/PayPalRT.php',
         'Validate' => __DIR__ . '/..' . '/geofmureithi/f3-validate/lib/validate.php',
     );
 
